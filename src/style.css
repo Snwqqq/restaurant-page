@@ -48,6 +48,7 @@ display: grid;
 }
 .about-us-container{
     display: grid;
+    margin: 50px 0;
     gap: 50px;
 }
 .first-section{
@@ -58,6 +59,7 @@ display: grid;
     display: flex;
     grid-template-columns: 1fr 2fr;
     font-size: clamp(1rem,1rem + 1vw,4rem);
+    font-style: italic ;
     gap: 4vw;
     border-bottom: 5px double rgba(0, 0, 0, 0.24);
 }
@@ -71,7 +73,7 @@ display: grid;
 }
 h1{
     justify-self:center;
-    font-size: clamp(1rem,1rem + 3vw,4rem);
+    font-size: clamp(2rem,1rem + 3vw,4rem);
 }
 .img-container{
     width: max(300px,30vw);
@@ -83,8 +85,20 @@ h1{
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
-.logo-container{
+.contact-container{
     display: flex;
+    justify-content: center;
+}
+
+.logo-container,
+.time-container{
+    display: flex;
+    align-items: center;
+    padding: 1vw;
+}
+.logo-container p{
+    padding-right: 2vw;
+    border-right: 2px solid black;
 }
 .logo-container img{
     width: 200px;
@@ -100,6 +114,22 @@ h1{
 }
 .img-container{
     width: 100vw;
+}
+.contact-container{
+   flex-wrap: wrap;
+}
+.logo-container img{
+    width: 100px;
+}
+.logo-container{
+    border-bottom: 1px solid black;
+}
+.first-section,
+.second-section{
+margin: 0;
+}
+.logo-container p{
+   border: none;
 }
 
 }
