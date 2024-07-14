@@ -103,12 +103,20 @@ h1{
 .logo-container img{
     width: 200px;
 }
+p img{
+    max-width: 20px;
+}
 
-
+.credits-container{
+text-align: center;
+display: flex;
+justify-content: center;
+font-size: clamp(0.5rem, 0.5rem + 1vw,1rem);
+}
 
 
 @media (max-width:600px) {
-    .first-section,
+.first-section,
 .second-section{
     flex-wrap: wrap;
 }
@@ -121,8 +129,9 @@ h1{
 .logo-container img{
     width: 100px;
 }
-.logo-container{
-    border-bottom: 1px solid black;
+.logo-container,
+.time-container{
+    border-bottom: 5px double rgba(0, 0, 0, 0.24);
 }
 .first-section,
 .second-section{
