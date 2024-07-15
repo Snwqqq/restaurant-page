@@ -180,6 +180,13 @@ font-size: clamp(0.5rem, 0.5rem + 1vw,1rem);
     cursor: pointer;
     transition: all, 0.5s;
 }
+.main-page{
+    cursor: pointer;
+}
+.main-page:hover{
+    border: 1px solid black;
+    border-radius: 20px;
+}
 
 
 @media (max-width:600px) {

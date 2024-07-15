@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import createMainPage from "./pages/main";
 import createMenuPage from './pages/menu';
+import createAboutPage from './pages/about';
 import './style.css';
 import logo from './icons/logo.png'
 import locationIcon from './icons/location.svg'
@@ -9,22 +10,25 @@ import emailIcon from './icons/email.svg'
 const main = document.querySelector('main');
 const menuBut = document.querySelector('#menu');
 const aboutBut = document.querySelector('#about');
+const mainPage = document.querySelectorAll('.main-page');
 
 
 aboutBut.addEventListener('click',()=>{
-    createNewPage(createMainPage);
+    createNewPage(createAboutPage);
 });
 
 menuBut.addEventListener('click', ()=>{
     createNewPage(createMenuPage);
 });
 
+mainPage.forEach((butt)=>{
+    butt.addEventListener('click',()=>{createNewPage(createMainPage)})
+});
 
 
 
 
-
-//createNewPage(createMainPage);
+createNewPage(createMainPage);
 
 
 
@@ -47,10 +51,13 @@ function selectedButton(pageFunction){
   
     switch (pageFunction){
         case createMainPage:
-            aboutBut.classList.add('selected');
+            
             break;
         case createMenuPage:
             menuBut.classList.add('selected');
+            break;
+        case createAboutPage:
+            aboutBut.classList.add('selected');
             break;
     }
 }
@@ -75,6 +82,7 @@ footer.appendChild(divCont);
 const divLogoCont = document.createElement('div');
 divLogoCont.classList.add('logo-container');
 const logoImg = document.createElement('img');
+logoImg.classList.add('main-page');
 logoImg.src = logo;
 logoImg.alt = 'cat logo';
 
