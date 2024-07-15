@@ -219,7 +219,12 @@ font-size: clamp(0.5rem, 0.5rem + 1vw,1rem);
     .menu-container img{
         min-width: 100%;
     }
+    .action-container{
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+        padding: 2vw;
+        margin: 0 90px;
     }
+}
     
 
 
