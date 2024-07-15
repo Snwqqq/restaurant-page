@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import createMainPage from "./pages/main";
+import createMenuPage from './pages/menu';
 import './style.css';
 const main = document.querySelector('main');
 const menuBut = document.querySelector('#menu');
@@ -11,7 +12,7 @@ aboutBut.addEventListener('click',()=>{
 });
 
 menuBut.addEventListener('click', ()=>{
-  clearMain();
+    createNewPage(createMenuPage);
 });
 
 
@@ -19,7 +20,7 @@ menuBut.addEventListener('click', ()=>{
 
 
 
-//createNewPage(createMainPage);
+createNewPage(createMainPage);
 
 
 
@@ -31,4 +32,20 @@ function clearMain(){
 function createNewPage(pageFunction){
     clearMain();
     main.appendChild(pageFunction());
+}
+
+selectedButton();
+
+function selectedButton(pageFunction){
+    const allButtons = document.querySelectorAll('menu-but');
+    console.log(allButtons);
+    allButtons.forEach((but)=>{
+        console.log(but);
+        return but.classList.remove('selected')});
+  
+    switch (pageFunction){
+        case createMainPage:
+            
+            break;
+    }
 }
