@@ -19,13 +19,14 @@ menuBut.addEventListener('click', ()=>{
 
 
 
-createNewPage(createMainPage);
+//createNewPage(createMainPage);
 
 
 
 function clearMain(){
-    if(main.firstChild!==null)
+    while(main.childElementCount>0){
     main.firstChild.remove();
+    }
 }
 function createNewPage(pageFunction){
     clearMain();

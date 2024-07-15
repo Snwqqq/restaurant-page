@@ -22,7 +22,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     clean: true,
   },
-  optimization: {
+  optimization: { 
     runtimeChunk: 'single',
   },
  module: {
