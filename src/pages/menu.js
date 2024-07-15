@@ -1,3 +1,6 @@
+import menu1 from '../svg/menu1.png';
+import menu2 from '../svg/menu2.png';
+
 export default function createMenuPage(){
     const divMenuContainer = document.createElement('div');
     divMenuContainer.classList.add('menu-container');
@@ -10,8 +13,8 @@ export default function createMenuPage(){
 
         divMenuContainer.appendChild(img);
     }
-    createSection("../src/svg/menu1.png");
-    createSection("../src/svg/menu2.png");
+    createSection(menu1);
+    createSection(menu2);
 return divMenuContainer;
 }
 

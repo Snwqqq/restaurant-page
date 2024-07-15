@@ -34,6 +34,14 @@ body{
     background-color: rgba(255, 255, 255, 0);
     border: none;
     cursor: pointer;
+    border-radius: 90%;
+    height: 90%;
+    transition: all, 0.15s;
+}
+.menu-but:hover,
+.action-container button:hover{
+    background: linear-gradient(to right, #000000 50%, #ffffff);
+    color: white;
 }
 .selected{
     font-size: max(3vw,3vh);
@@ -124,7 +132,54 @@ justify-content: center;
 font-size: clamp(0.5rem, 0.5rem + 1vw,1rem);
 }
 
-
+.back-ground{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(./img/background.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.back-ground::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2); /* Change the opacity here */
+    z-index: 1;
+}
+.action-container{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    padding: 2vw;
+    margin: 0 clamp(50px,35vw,400px);
+    text-decoration: underline;
+    border-radius: 10vh;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.6);
+    color: black;
+    font-size: clamp(2rem,1rem + 3vw,4rem);
+    position: relative;
+    z-index: 2;
+    opacity: 2;
+}
+.action-container button{
+    font-size: clamp(2rem,1rem + 3vw,4rem);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.568);
+    border-radius: 10px;
+    padding: 0 20px;
+    border: none;
+    background-color: rgb(18, 26, 19);
+    color: white;
+    cursor: pointer;
+    transition: all, 0.5s;
+}
 
 
 @media (max-width:600px) {
