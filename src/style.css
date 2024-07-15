@@ -27,7 +27,7 @@ body{
 .header-buttons{
     display: flex;
     align-items: center;
-    gap: 2vw;
+    gap: max(2vw,20px);
 }
 .menu-but{
     font-size: clamp(1rem,1rem + 1vw,3rem);
@@ -221,9 +221,14 @@ font-size: clamp(0.5rem, 0.5rem + 1vw,1rem);
     }
     .action-container{
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-        padding: 2vw;
-        margin: 0 90px;
+        padding: 10vw;
+        margin: 0 2vw;
     }
+    .menu-but:hover,
+.action-container button:hover{
+    background: black;
+    color: white;
+}
 }
     
 
