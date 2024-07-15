@@ -2,6 +2,7 @@ import _ from 'lodash';
 import createMainPage from "./pages/main";
 import createMenuPage from './pages/menu';
 import createAboutPage from './pages/about';
+import createContactPage from './pages/contact';
 import './style.css';
 import logo from './icons/logo.png'
 import locationIcon from './icons/location.svg'
@@ -10,6 +11,7 @@ import emailIcon from './icons/email.svg'
 const main = document.querySelector('main');
 const menuBut = document.querySelector('#menu');
 const aboutBut = document.querySelector('#about');
+const contactBut = document.querySelector('#contact');
 const mainPage = document.querySelectorAll('.main-page');
 
 
@@ -19,6 +21,10 @@ aboutBut.addEventListener('click',()=>{
 
 menuBut.addEventListener('click', ()=>{
     createNewPage(createMenuPage);
+});
+
+contactBut.addEventListener('click', ()=>{
+    createNewPage(createContactPage);
 });
 
 mainPage.forEach((butt)=>{
@@ -58,6 +64,9 @@ function selectedButton(pageFunction){
             break;
         case createAboutPage:
             aboutBut.classList.add('selected');
+            break;
+        case createContactPage:
+            contactBut.classList.add('selected');
             break;
     }
 }

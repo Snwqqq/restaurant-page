@@ -8,6 +8,7 @@ module.exports = {
     main:'./src/pages/main.js',
     menu:'./src/pages/menu.js',
     about:'./src/pages/about.js',
+    contact:'./src/pages/contact.js'
   },
   devtool: 'inline-source-map',
   devServer: {
